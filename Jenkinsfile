@@ -4,9 +4,13 @@ pipeline {
     }
 
     stages {
-        stage('PreBuild') {
+        stage('Checkout') {
             steps {
-                echo 'Hello, world!'
+                checkout scm {
+                    git {
+                        url 'https://github.com/edward-cant/pipeline-ng'
+                    }
+                }
             }
         }
 
