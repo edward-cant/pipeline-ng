@@ -4,15 +4,15 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm {
-                    git {
-                        url 'https://github.com/edward-cant/pipeline-ng'
-                    }
-                }
-            }
-        }
+        // stage('Checkout') {
+        //     steps {
+        //         checkout scm {
+        //             git {
+        //                 url 'https://github.com/edward-cant/pipeline-ng' 
+        //             }
+        //         }
+        //     }
+        // }
 
         stage('Build') {
             steps {
