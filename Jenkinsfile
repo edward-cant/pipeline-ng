@@ -1,5 +1,7 @@
 pipeline {
-    agent "syncsense"
+    agent {
+        label "syncsense"
+    }
 
     stages {
         // stage('Checkout') {
