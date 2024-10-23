@@ -1,17 +1,14 @@
 pipeline {
-    agent any
+    agent {
+        label 'syncsense'
+    }
 
     stages {
-        // stage('Checkout') {
-        //     steps {
-        //         checkout scm {
-        //             git {
-        //                 url 'https://your-git-repository-url.git' // Replace with your Git repository URL
-        //                 credentials 'your-credentials-id' // Replace with your credentials ID
-        //             }
-        //         }
-        //     }
-        // }
+        stage('PreBuild') {
+            steps {
+                echo 'Hello, world!'
+            }
+        }
 
         stage('Build') {
             steps {
