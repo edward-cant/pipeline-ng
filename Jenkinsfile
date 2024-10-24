@@ -17,6 +17,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('hello-world') {
+                    sh 'uname -a'
                     sh 'npm install'
                     sh 'ng build --prod'
                 }
