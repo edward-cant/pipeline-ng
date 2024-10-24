@@ -19,6 +19,7 @@ pipeline {
                 dir('hello-world') {
                     sh 'uname -a'
                     sh 'env'
+                    sh 'nvm install --lts'
                     sh 'npm install'
                     sh 'ng build --prod'
                 }
