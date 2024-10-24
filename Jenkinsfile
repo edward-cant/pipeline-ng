@@ -18,6 +18,8 @@ pipeline {
             steps {
                 dir('hello-world') {
                     sh 'uname -a'
+                    sh 'env'
+                    sh './home/jenkins/nvm.sh'
                     sh 'npm install'
                     sh 'ng build --prod'
                 }
