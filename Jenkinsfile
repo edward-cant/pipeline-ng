@@ -19,7 +19,6 @@ pipeline {
                 dir('hello-world') {
                     sh 'uname -a'
                     sh 'env'
-                    sh 'source /home/jenkins/nvm.sh'
                     sh 'npm install'
                     sh 'ng build --prod'
                 }
