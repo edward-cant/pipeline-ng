@@ -18,6 +18,9 @@ pipeline {
             steps {
                 sh 'ip a'
                 sh 'uname -a'
+                sh 'echo $PATH'
+                sh 'which npm'
+                sh 'which ng'
             }
         }
 
