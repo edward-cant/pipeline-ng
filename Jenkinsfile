@@ -13,6 +13,13 @@ pipeline {
         //         }
         //     }
         // }
+        
+        stage('Information') {
+            steps {
+                sh 'ip a'
+                sh 'uname -a'
+            }
+        }
 
         stage('Build') {
             steps {
