@@ -36,7 +36,8 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'cp -r hello-world/dist/* /output'
+                sh 'mkdir -p output/'
+                sh 'cp -r hello-world/dist/* output/'
             }
         }
     }
